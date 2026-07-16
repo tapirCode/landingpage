@@ -1,0 +1,41 @@
+header{
+    border: 1px solid black;
+}
+header .humburger-section{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    justify-content: space-between;
+    background-color: blue;
+}
+header .humburger-section .menu-button{
+    color: black;
+    height: 40px;
+    width: 40px;
+}
+header .humburger-section .menu-button::before{
+    content: "\2630";
+}
+header .humburger-section .active::before{
+    content:"b";
+}
+nav{
+    display: none;
+    border: 1px solid blue;
+}
+.aktif{
+    display: flex;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    gap: 20px;
+    width: 100%;
+    border: 1px solid brown;
+}
+header nav ul li a{
+    text-decoration: none;
+    list-style: none;
+}
