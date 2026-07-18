@@ -1,41 +1,110 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    color: white;
+    scrollbar-width: none;
+}
+.body-mode{
+    background-color: white;
+    color:black;
+}
 header{
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    touch-action: none;
+}
+header h1{
+    color:white;
 }
 header .humburger-section{
     display: flex;
     align-items: center;
     padding: 0 15px;
     justify-content: space-between;
-    background-color: blue;
+    background-color: #10132E;
+    width: 100%;
 }
 header .humburger-section .menu-button{
-    color: black;
+    color: white;
     height: 40px;
     width: 40px;
+    background: transparent;
+    border: none;
+    font-size: 35px;
 }
 header .humburger-section .menu-button::before{
     content: "\2630";
 }
 header .humburger-section .active::before{
-    content:"b";
+    content:"X";
+    color:blue;
+}
+.active-blur{
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    z-index: 3;
+    touch-action: none;
+}
+.section-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+gap:10px;
+}
+.section-logo .dark-mode img{
+    height: 30px;
 }
 nav{
-    display: none;
-    border: 1px solid blue;
+    visibility: hidden;
+opacity: 0;
+transform: translateY(-15px);
+transition: all 0.3s ease-out;
+    position: absolute;
+    top: 73px;
+    left: 0;
+    width: 100%;
+ background-color:#10132E;
 }
 .aktif{
     display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    justify-content: center;
+    align-items: center;
+    flex-direction: center;
+    border-radius: 0 0 10px 10px;
+    height: 150px;
+    
 }
 header nav ul{
     display: flex;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
     list-style: none;
-    gap: 20px;
     width: 100%;
-    border: 1px solid brown;
+    height: 20vh;
+    gap:30px;
 }
 header nav ul li a{
     text-decoration: none;
     list-style: none;
+    color:white;
+    transition: all 0.4s ease;
+}
+
+nav ul li a:active{
+    border: 3px solid red ;
+    transform: translateY(2px)
 }
