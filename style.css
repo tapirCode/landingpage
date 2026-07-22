@@ -2,6 +2,8 @@ html{
     scroll-behavior: smooth;
 }
 body{
+    margin: 0;
+    padding: 0;
     background-color: black;
     color: white;
     scrollbar-width: none;
@@ -44,7 +46,7 @@ header .humburger-section .menu-button::before{
 }
 header .humburger-section .active::before{
     content:"X";
-    color:blue;
+    color:white;
 }
 .active-blur{
     height: 100vh;
@@ -108,34 +110,49 @@ nav ul li a:active{
     border: 3px solid red ;
     transform: translateY(2px)
 }
+main{
+    height: 100vh;
+    width: 100%;
+    padding-top: 200px;
+    text-align: center;
+}
+main .section-hero{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: wheat;
+    font-family: "Google Sans Code";
+}
 
 
 @media(min-width:768px){
     body{
-background-color: red;
+background-color: black;
     }
     header{
         position: sticky;
         justify-content: center;
         align-items: center;
-        background-color: white;
+        background-color: #10132E;
     top: 0;
     left: 0;
     }
     nav{
         display: flex;
         position: static;
-        flex: 1;
         opacity: 1;
         visibility: visible;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        height:auto;
+        transform: none;
+        transition: none;
+        background-color: #10132E;
         
     }
     header .humburger-section{
-        background-color: blue;
+        background-color:#10132E;
         flex:1;
     }
     header .humburger-section .menu-button{
