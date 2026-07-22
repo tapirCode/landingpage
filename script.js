@@ -3,6 +3,7 @@ const navbarSection = document.querySelector(".navbar")
 const sectionHeader = document.querySelector(".section-header")
 const blurBody = document.querySelector('.blur-body')
 const darkMode = document.querySelector('.dark-mode')
+const headingHero =document.querySelector('.heading-hero')
 //fungsi untuk button mode dark mode
 darkMode.addEventListener('click', () =>{
     alert('fitur mode dark mode, dalam proses')
@@ -22,4 +23,8 @@ if (!sectionHeader.contains(e.target)) {
     blurBody.classList.remove("active-blur")
     document.body.classList.remove("body-mode")
 }
+})
+
+headingHero.addEventListener("click", ()=>{
+    headingHero.classList.toggle("actives")
 })
