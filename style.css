@@ -108,3 +108,44 @@ nav ul li a:active{
     border: 3px solid red ;
     transform: translateY(2px)
 }
+
+
+@media(min-width:768px){
+    body{
+background-color: red;
+    }
+    header{
+        position: sticky;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    top: 0;
+    left: 0;
+    }
+    nav{
+        display: flex;
+        position: static;
+        flex: 1;
+        opacity: 1;
+        visibility: visible;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height:auto;
+        
+    }
+    header .humburger-section{
+        background-color: blue;
+        flex:1;
+    }
+    header .humburger-section .menu-button{
+        display: none;
+    }
+    header nav ul{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        height:auto;
+    }
+}
